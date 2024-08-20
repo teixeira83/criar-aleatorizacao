@@ -7,7 +7,7 @@ const QUANTITY_OF_PERIODS = 2;
 const QUANTITY_OF_FEMALE_PARTICIPANTS = 2;
 const QUANTITY_OF_MALE_PARTICIPANTS = 2;
 
-const ABBREVIATIONS = ['X1', 'X2'];
+const ABBREVIATIONS = ['X1'];
 
 const headerRow = [
     '',
@@ -44,7 +44,7 @@ function populateParticipants(periods, femaleParticipants, maleParticipants) {
         }
 
         for (let male = 0; male < maleParticipants; male++) {
-            const participantOrder = male + 1;
+            const participantOrder = femaleParticipants + male + 1;
             const participantPeriod = period + 1;
             const participantAbbreviation = ABBREVIATIONS[period] || ABBREVIATIONS[0];
 
